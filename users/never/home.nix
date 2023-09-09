@@ -53,6 +53,7 @@
     artyFX
     drumgizmo
     gnome.gnome-software
+    gnome-builder
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
