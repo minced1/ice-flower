@@ -51,6 +51,7 @@
     lsp-plugins
     calf
     artyFX
+    gxplugins-lv2
     drumgizmo
     gnome.gnome-software
     gnome-builder
