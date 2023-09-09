@@ -1,4 +1,5 @@
 #!/bin/sh
 pushd ~/.dotfiles
-home-manager switch -f ./users/never/home.nix
+nix build .#homeManagerConfigurations.never.activationPackage
+./result/activate
 popd
