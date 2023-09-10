@@ -54,7 +54,9 @@
     gxplugins-lv2
     drumgizmo
     gnome.gnome-software
+    gnomeExtensions.paperwm
     gnome-builder
+    
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
