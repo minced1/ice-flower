@@ -47,12 +47,14 @@
     git-crypt
     gnupg
     pinentry-gnome
+    
     ardour
     lsp-plugins
     calf
     artyFX
-    gxplugins-lv2
+    sfizz
     drumgizmo
+    
     gnome.gnome-software
     gnomeExtensions.paperwm
     gnome-builder
