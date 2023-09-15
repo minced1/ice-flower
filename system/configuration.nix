@@ -152,6 +152,21 @@
   #  wget
     git   
   ];
+  
+  environment.gnome.excludePackages = (with pkgs; [
+    gnome-photos
+    gnome-tour
+    gnome-connections
+  ]) ++ (with pkgs.gnome; [
+    cheese
+    gnome-music
+    totem 
+    simple-scan
+    baobab
+    file-roller
+    seahorse
+  ]);
+
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

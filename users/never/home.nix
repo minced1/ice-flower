@@ -54,7 +54,7 @@
     artyFX
     sfizz
     drumgizmo
-    
+    tor-browser-bundle-bin
     gnome.gnome-software
     gnomeExtensions.paperwm
     gnome-builder
