@@ -18,11 +18,15 @@
   programs.gpg = {
     enable = true;
   };
+  
+  
 
   services.gpg-agent = {
     enable = true;
     pinentryFlavor = "gnome3";
   };
+  
+  
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
@@ -48,19 +52,39 @@
     gnupg
     pinentry-gnome
     
+    adw-gtk3
+    
     ardour
     lsp-plugins
     calf
     artyFX
     sfizz
     drumgizmo
-    tor-browser-bundle-bin
-    gnome.gnome-software
-    gnomeExtensions.paperwm
-    gnome-builder
     
+    tor-browser-bundle-bin
+    
+    gnome.gnome-software
+    gnome-builder
   ];
 
+  dconf = {
+    enable = true;
+    settings = {
+      "org/gnome/desktop/interface" = {
+        # color-scheme = "prefer-dark";
+        gtk-theme = "adw-gtk3";
+      };
+    };
+  };
+  
+  gtk = {
+    enable = true;
+    theme = {
+      name = "adw-gtk3";
+      package = pkgs.adw-gtk3; 
+    };
+  };
+  
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
