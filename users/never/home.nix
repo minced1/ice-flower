@@ -52,6 +52,8 @@
     gnupg
     pinentry-gnome
     
+    etcher
+    
     adw-gtk3
     
     ardour
@@ -60,6 +62,7 @@
     artyFX
     sfizz
     drumgizmo
+    distrho
     
     tor-browser-bundle-bin
     
@@ -73,6 +76,10 @@
       "org/gnome/desktop/interface" = {
         # color-scheme = "prefer-dark";
         gtk-theme = "adw-gtk3";
+        font-antialiasing = "rgba";
+      };
+      "org/gnome/desktop/peripherals/mouse" = {
+        middle-click-emulation = true;
       };
     };
   };
@@ -84,6 +91,8 @@
       package = pkgs.adw-gtk3; 
     };
   };
+  
+  
   
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
