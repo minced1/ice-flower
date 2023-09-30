@@ -131,26 +131,48 @@
     ];
   };
   
-  fileSystems."/mnt/sda1" = {
-    device = "/dev/sda1";
+  fileSystems."/data" = {
+    device = "/dev/disk/by-uuid/c02532a2-9178-45c0-b82c-720453918860";
     fsType = "ext4";
   };
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-  
+
+
   # Enable nix flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   
   # Enable flatpak
   services.flatpak.enable = true;
- 
+
+	# Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
-    git   
+    git
+    git-crypt
+    gnupg
+    pinentry-gnome
+
+    adw-gtk3
+
+    ardour
+    lsp-plugins
+    calf
+    artyFX
+    sfizz
+    drumgizmo
+    distrho
+
+    tor-browser-bundle-bin
+
+    gnome.gnome-software
+
+    gnome.nautilus-python
+    gnome-builder
   ];
   
   environment.gnome.excludePackages = (with pkgs; [
@@ -171,10 +193,10 @@
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+  };
 
   # List services that you want to enable:
 
@@ -193,6 +215,6 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "23.05"; # Did you read the comment?
+  system.stateVersion = "23.11"; # Did you read the comment?
 
 }
