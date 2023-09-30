@@ -15,16 +15,17 @@
   # release notes.
   home.stateVersion = "23.05"; # Please read the comment before changing.
 
-  programs.gpg = {
-    enable = true;
-  };
+  # programs.gpg = {
+  #   enable = true;
+  # };
   
   
 
-  services.gpg-agent = {
-    enable = true;
-    pinentryFlavor = "gnome3";
-  };
+  # services.gpg-agent = {
+  #   enable = true;
+  #   enableSSHSupport = true;
+  #   pinentryFlavor = "gnome3";
+  # };
   
   
 
@@ -52,8 +53,6 @@
     gnupg
     pinentry-gnome
     
-    etcher
-    
     adw-gtk3
     
     ardour
@@ -67,6 +66,7 @@
     tor-browser-bundle-bin
     
     gnome.gnome-software
+    gnome.nautilus-python
     gnome-builder
   ];
 
