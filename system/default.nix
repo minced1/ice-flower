@@ -24,24 +24,8 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-  # Set your time zone.
-  time.timeZone = "Europe/Berlin";
 
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
 
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "de_DE.UTF-8";
-    LC_IDENTIFICATION = "de_DE.UTF-8";
-    LC_MEASUREMENT = "de_DE.UTF-8";
-    LC_MONETARY = "de_DE.UTF-8";
-    LC_NAME = "de_DE.UTF-8";
-    LC_NUMERIC = "de_DE.UTF-8";
-    LC_PAPER = "de_DE.UTF-8";
-    LC_TELEPHONE = "de_DE.UTF-8";
-    LC_TIME = "de_DE.UTF-8";
-  };
-  
   # Enable OpenGL
   hardware.opengl = {
     enable = true;
@@ -56,20 +40,9 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
   
-  # Configure keymap in X11
-  services.xserver = {
-    layout = "de";
-    xkbVariant = "nodeadkeys";
-  };
-
-  # Configure console keymap
-  console.keyMap = "de-latin1-nodeadkeys";
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-
-  # Enable musnix tweaks
-  musnix.enable = true;
   
   # Enable sound with pipewire.
   sound.enable = false;
@@ -155,10 +128,10 @@
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-  };
+  # programs.gnupg.agent = {
+  #   enable = true;
+  #   enableSSHSupport = true;
+  # };
 
   # List services that you want to enable:
 
