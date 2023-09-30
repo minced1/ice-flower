@@ -64,17 +64,8 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.never = {
-    isNormalUser = true;
-    description = "Never";
-    extraGroups = [ "networkmanager" "wheel" "audio"];
-    packages = with pkgs; [
-      firefox
-    #  thunderbird
-    ];
-  };
-  
+
+
   fileSystems."/data" = {
     device = "/dev/disk/by-uuid/c02532a2-9178-45c0-b82c-720453918860";
     fsType = "ext4";
@@ -100,14 +91,6 @@
     git-crypt
     gnupg
     pinentry-gnome
-
-    adw-gtk3
-
-    tor-browser-bundle-bin
-
-    gnome.gnome-software
-    gnome.nautilus-python
-    gnome-builder
   ];
   
   environment.gnome.excludePackages = (with pkgs; [

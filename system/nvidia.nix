@@ -1,9 +1,5 @@
 { config, lib, pkgs, ... }:
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
 	# Load nvidia driver for Xorg and Wayland
 	services.xserver.videoDrivers = ["nvidia"];
 
