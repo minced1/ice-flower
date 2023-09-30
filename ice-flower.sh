@@ -21,10 +21,10 @@ elif [ "$1" = "switch" ]; then
 elif [ "$1" = "boot" ]; then
   sudo nixos-rebuild boot --flake .#
 elif [ "$1" = "init" ]; then
-  if [ "$2" = "--config"]; then
+  if [ "$2" = "--config" ]; then
     nixos-generate-config --dir ./system/
-  elif [ "$2" = "--script"]; then
-    ln -sf $HOME/.dotfiles/ice-flower.sh $HOME/.local/bin/
+  elif [ "$2" = "--script" ]; then
+    ln -sf $HOME/ice-flower/ice-flower.sh $HOME/.local/bin/
     ln
   else
     echo "Usage: ice-flower.sh init [OPTION]

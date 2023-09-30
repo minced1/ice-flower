@@ -5,7 +5,6 @@
   # manage.
   home.username = "never";
   home.homeDirectory = "/home/never";
-  home.sessionPath = [ "$HOME/.local/bin" ];
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
@@ -34,26 +33,6 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
-    git
-    git-crypt
-    gnupg
-    pinentry-gnome
-    
-    adw-gtk3
-    
-    ardour
-    lsp-plugins
-    calf
-    artyFX
-    sfizz
-    drumgizmo
-    distrho
-    
-    tor-browser-bundle-bin
-    
-    gnome.gnome-software
-    gnome.nautilus-python
-    gnome-builder
   ];
 
   dconf = {
