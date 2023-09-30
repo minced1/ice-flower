@@ -25,14 +25,6 @@
   networking.networkmanager.enable = true;
 
 
-
-  # Enable OpenGL
-  hardware.opengl = {
-    enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
-  };
-
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
@@ -48,7 +40,6 @@
     # use the example session manager (no others are packaged yet so this is enabled by default,
     # no need to redefine it in your config for now)
     #media-session.enable = true;
-  };
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
@@ -62,9 +53,7 @@
 
 
 
-  # Enable nix flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  
+
 
 
   # Some programs need SUID wrappers, can be configured further or are

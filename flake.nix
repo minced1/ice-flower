@@ -16,11 +16,13 @@
       nixos = nixpkgs.lib.nixosSystem {
       	system = "x86_64-linux";
         modules = [
+        	(import ./system/configuration.nix)
           (import ./system/default.nix)
           (import ./system/audio.nix)
           (import ./system/nvidia.nix)
           (import ./system/locale.nix)
           (import ./system/users.nix)
+          (import ./system/applications.nix)
 
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
