@@ -8,6 +8,12 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./applications
+      ./audio
+      ./gnome
+      ./hardware
+      ./locale
+      ./users
     ];
 
   # Bootloader.
@@ -24,18 +30,11 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-  
-
   # Enable CUPS to print documents.
   services.printing.enable = true;
-  
 
     # use the example session manager (no others are packaged yet so this is enabled by default,
     # no need to redefine it in your config for now)
@@ -43,18 +42,6 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
-
-
-
-  fileSystems."/data" = {
-    device = "/dev/disk/by-uuid/c02532a2-9178-45c0-b82c-720453918860";
-    fsType = "ext4";
-  };
-
-
-
-
-
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

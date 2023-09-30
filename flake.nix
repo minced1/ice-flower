@@ -16,18 +16,12 @@
       nixos = nixpkgs.lib.nixosSystem {
       	system = "x86_64-linux";
         modules = [
-        	(import ./system/configuration.nix)
-          (import ./system/default.nix)
-          (import ./system/audio.nix)
-          (import ./system/nvidia.nix)
-          (import ./system/locale.nix)
-          (import ./system/users.nix)
-          (import ./system/applications.nix)
+          (import ./system)
 
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.never = import ./users/never/home.nix;
+            home-manager.users.never = import ./home-manager/never/home.nix;
 					}
 
           musnix.nixosModules.musnix
