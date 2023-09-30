@@ -44,17 +44,6 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
   
-  # Enable sound with pipewire.
-  sound.enable = false;
-  hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    jack.enable = true;
 
     # use the example session manager (no others are packaged yet so this is enabled by default,
     # no need to redefine it in your config for now)
@@ -76,36 +65,6 @@
   # Enable nix flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   
-  # Enable flatpak
-  services.flatpak.enable = true;
-
-	# Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
-    git
-    git-crypt
-    gnupg
-    pinentry-gnome
-  ];
-  
-  environment.gnome.excludePackages = (with pkgs; [
-    gnome-photos
-    gnome-tour
-    gnome-connections
-  ]) ++ (with pkgs.gnome; [
-    cheese
-    gnome-music
-    totem 
-    simple-scan
-    baobab
-    file-roller
-    seahorse
-  ]);
 
 
   # Some programs need SUID wrappers, can be configured further or are

@@ -20,6 +20,7 @@
           (import ./system/audio.nix)
           (import ./system/nvidia.nix)
           (import ./system/locale.nix)
+          (import ./system/users.nix)
 
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
