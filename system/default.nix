@@ -170,6 +170,7 @@
     tor-browser-bundle-bin
 
     gnome.gnome-software
+
     gnome.nautilus-python
     gnome-builder
   ];
