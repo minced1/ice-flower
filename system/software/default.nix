@@ -20,5 +20,6 @@
 	  git-crypt
 	  gnupg
 	  pinentry-gnome
+	  curl
 	];
 }
