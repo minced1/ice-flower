@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    wine-staging
+    wineWowPackages.staging
     yabridge
     yabridgectl
   ];

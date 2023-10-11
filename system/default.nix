@@ -8,7 +8,7 @@
   imports =
     [
       ./hardware-configuration.nix
-      ./software
+      ./misc
       ./audio
       ./gnome
       ./hardware
