@@ -7,7 +7,7 @@
   # Enable CUPS to print documents.
   services.printing = {
     enable = true;
-    drivers = [ pkgs.epson-escpr ]
+    drivers = [ pkgs.epson-escpr ];
   };
 }
  
