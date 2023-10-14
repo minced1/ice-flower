@@ -5,6 +5,7 @@
   musnix.enable = true;
 
   environment.systemPackages = with pkgs; [
+    lingot
     ardour
     lsp-plugins
     calf
