@@ -9,6 +9,8 @@
     enable = true;
     drivers = [ pkgs.epson-escpr ];
   };
+  
+  services.avahi.nssmdns = true;
 }
  
 
