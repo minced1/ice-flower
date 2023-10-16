@@ -13,16 +13,17 @@
     # If you want to use JACK applications, uncomment this
     jack.enable = true;
 	};
-  # Enable musnix tweaks
-  musnix.enable = true;
-
-	environment.systemPackages = with pkgs; [
-		ardour
-    lsp-plugins
-    calf
-    artyFX
-    sfizz
-    drumgizmo
-    distrho
-	];
+  
+  environment.etc = {
+    "pipewire/pipewire.conf.d/92-low-latency.conf".text = ''
+      context.properties = {
+        default.clock.rate = 48000
+        default.clock.allowed-rates = [ 48000 96000 ]
+        default.clock.min-quantum = 32
+        default.clock.max-quantum = 8192
+        default.clock.quantum = 128
+        default.clock.quantum-limit = 8192
+      }
+    '';
+  };
 }

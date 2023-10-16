@@ -1,8 +1,10 @@
 { config, lib, pkgs, ... }:
 {
-	# Enable nix flakes
-	nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
+  imports =
+    [ 
+      ./python.nix
+      ./plex.nix
+    ];
 	# Enable flatpak
 	services.flatpak.enable = true;
 
@@ -18,5 +20,6 @@
 	  git-crypt
 	  gnupg
 	  pinentry-gnome
+	  curl
 	];
 }
