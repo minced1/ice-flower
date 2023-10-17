@@ -16,7 +16,7 @@
       nixos = nixpkgs.lib.nixosSystem {
       	system = "x86_64-linux";
         modules = [
-          (import ./system)
+          import ./modules
 
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
