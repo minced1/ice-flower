@@ -1,9 +1,10 @@
 { config, lib, pkgs, ... }:
 {
   imports =
-    [ 
+    [
       ./python.nix
       ./plex.nix
+      ./steam.nix
     ];
 	# Enable flatpak
 	services.flatpak.enable = true;
@@ -22,4 +23,10 @@
 	  pinentry-gnome
 	  curl
 	];
+
+	programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+    pinentryFlavor = "gnome";
+  };
 }
