@@ -1,6 +1,10 @@
 { config, lib, pkgs, ... }:
 {
 	environment.systemPackages = with pkgs; [
-    python3
+		discord
 	];
+
+	(pkgs.discord.override {
+		withVencord = true;
+	})
 }
