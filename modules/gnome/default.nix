@@ -5,6 +5,8 @@
   services.xserver.desktopManager.gnome.enable = true;
 
   environment.systemPackages = with pkgs; [
+  	fragments
+    gnome.dconf-editor
     gnomeExtensions.gsconnect
     gnomeExtensions.rounded-window-corners
   ];

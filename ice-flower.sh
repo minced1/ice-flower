@@ -23,11 +23,11 @@ elif [ "$1" = "boot" ]; then
 elif [ "$1" = "init" ]; then
   if [ "$2" = "--config" ]; then
     nixos-generate-config --dir ./system/
-  elif [ "$2" = "--script" ]; then
+  elif [ "$2" = "--script" r]; then
     ln -sf $HOME/ice-flower/ice-flower.sh $HOME/.local/bin/
     ln
   else
-    echo "Usage: ice-flower.sh init [OPTION]
+    echo "Usage: ice-flower.sh init [OPTION]r
 
 	Options:
 

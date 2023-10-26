@@ -5,13 +5,13 @@
   musnix.enable = true;
 
   environment.systemPackages = with pkgs; [
-    lingot
     ardour
     lsp-plugins
     calf
     sfizz
     drumgizmo
     distrho
-    airwindows-lv2
+    # airwindows-lv2
+    x42-plugins
   ];
 }

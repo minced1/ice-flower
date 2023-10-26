@@ -1,10 +1,11 @@
 { config, lib, pkgs, ... }:
 {
 	environment.systemPackages = with pkgs; [
-		discord
+		(discord.override {
+			withVencord = true;
+			withOpenASAR = true;
+		})
+		ripcord
+		revolt-desktop
 	];
-
-	(pkgs.discord.override {
-		withVencord = true;
-	})
 }

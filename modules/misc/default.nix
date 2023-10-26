@@ -2,7 +2,7 @@
 {
   imports =
     [
-      ./python.nix
+      # ./python.nix
       ./plex.nix
       ./steam.nix
       ./discord.nix
@@ -19,6 +19,7 @@
 	  gnupg
 	  pinentry-gnome
 	  curl
+	  freecad
 	];
 
 	programs.gnupg.agent = {
