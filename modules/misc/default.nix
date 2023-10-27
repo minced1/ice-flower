@@ -3,7 +3,7 @@
   imports =
     [
       # ./python.nix
-      ./plex.nix
+      ./jellyfin.nix
       ./steam.nix
       ./discord.nix
     ];
