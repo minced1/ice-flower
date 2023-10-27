@@ -5,7 +5,7 @@
 			withVencord = true;
 			withOpenASAR = true;
 		})
-		ripcord
+		#ripcord
 		revolt-desktop
 	];
 }
