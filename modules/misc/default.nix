@@ -6,6 +6,7 @@
       ./jellyfin.nix
       ./steam.nix
       ./discord.nix
+      ./texlive.nix
     ];
 	# Enable flatpak
 	services.flatpak.enable = true;
@@ -20,6 +21,9 @@
 	  pinentry-gnome
 	  curl
 	  # freecad
+	  firefox
+  	# thunderbird
+		tor-browser-bundle-bin
 	];
 
 	programs.gnupg.agent = {

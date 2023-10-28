@@ -6,7 +6,10 @@
 
   environment.systemPackages = with pkgs; [
   	fragments
+  	gnome.gnome-software
+		gnome-builder
     gnome.dconf-editor
+
     gnomeExtensions.gsconnect
     gnomeExtensions.rounded-window-corners
   ];

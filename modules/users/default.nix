@@ -6,13 +6,6 @@
     description = "Never";
     extraGroups = [ "networkmanager" "wheel" "audio"];
     packages = with pkgs; [
-      firefox
-    #  thunderbird
-		  tor-browser-bundle-bin
-
-		  gnome.gnome-software
-		  gnome.nautilus-python
-		  gnome-builder
     ];
   };
 }

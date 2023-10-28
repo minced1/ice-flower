@@ -2,10 +2,12 @@
 {
 	environment.systemPackages = with pkgs; [
 		(discord.override {
-			withVencord = true;
-			withOpenASAR = true;
+			withVencord = false;
+			withOpenASAR = false;
 		})
 		#ripcord
 		revolt-desktop
 	];
+
+
 }
