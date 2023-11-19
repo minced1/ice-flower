@@ -1,13 +1,13 @@
 { config, lib, pkgs, ... }:
 {
-  imports =
-    [
-      ./python.nix
-      ./jellyfin.nix
-      ./steam.nix
-      ./discord.nix
-      ./texlive.nix
-    ];
+	imports =
+		[
+			./python.nix
+			./jellyfin.nix
+			./steam.nix
+			./discord.nix
+			./texlive.nix
+		];
 	# Enable flatpak
 	services.flatpak.enable = true;
 
@@ -15,20 +15,20 @@
 	nixpkgs.config.allowUnfree = true;
 
 	environment.systemPackages = with pkgs; [
-	  git
-	  git-crypt
-	  gnupg
-	  pinentry-gnome
-	  curl
-	  # freecad
-	  firefox
-  	# thunderbird
+		git
+		git-crypt
+		gnupg
+		# pinentry-gnome
+		curl
+		# freecad
+		firefox
+		# thunderbird
 		tor-browser-bundle-bin
 	];
 
 	programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-    pinentryFlavor = "gnome3";
-  };
+		enable = true;
+		enableSSHSupport = true;
+		pinentryFlavor = "curses";
+	};
 }
