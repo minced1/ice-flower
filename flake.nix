@@ -18,13 +18,7 @@
 				system = "x86_64-linux";
 				modules = [
 					(import ./modules)
-
-					home-manager.nixosModules.home-manager {
-						home-manager.useGlobalPkgs = true;
-						home-manager.useUserPackages = true;
-						home-manager.users.never = import ./home-manager/never/home.nix;
-					}
-
+					(import home-manager.nix)
 					musnix.nixosModules.musnix
 				];
 			};
