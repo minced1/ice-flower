@@ -7,10 +7,11 @@
 	services.xserver.desktopManager.gnome.enable = true;
 
 	environment.systemPackages = with pkgs; [
-		fragments
+		#fragments
 		gnome.gnome-software
-		gnome-builder
-		gnome.dconf-editor
+		openh264
+		#gnome-builder
+		#gnome.dconf-editor
 		#celeste
 
 		gnomeExtensions.rounded-window-corners

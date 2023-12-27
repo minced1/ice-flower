@@ -1,10 +1,21 @@
 { config, lib, pkgs, ... }:
 {
+	# nixpkgs.config.packageOverrides = pkgs: {
+	# 	vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; };
+	# };
+
 	# Enable OpenGL
 	hardware.opengl = {
 		enable = true;
 		driSupport = true;
 		driSupport32Bit = true;
+		# extraPackages = with pkgs; [
+			#intel-media-driver # LIBVA_DRIVER_NAME=iHD
+			#vaapiIntel				 # LIBVA_DRIVER_NAME=i965 (older but works better for Firefox/Chromium)
+		# 	nvidia-vaapi-driver
+		# 	vaapiVdpau
+		# 	libvdpau-va-gl
+		# ];
 	};
 
 	# Load nvidia driver for Xorg and Wayland

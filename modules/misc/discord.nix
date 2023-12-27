@@ -7,7 +7,6 @@
 			withOpenASAR = false;
 		})
 		#ripcord
-		revolt-desktop
 		webcord
 
 	];

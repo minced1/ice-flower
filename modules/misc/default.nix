@@ -2,10 +2,10 @@
 {
 	imports =
 		[
-			./python.nix
-			./jellyfin.nix
+			#./python.nix
+			#./jellyfin.nix
 			./steam.nix
-			./discord.nix
+			#./discord.nix
 			./texlive.nix
 		];
 	# Enable flatpak
@@ -23,7 +23,10 @@
 		# freecad
 		firefox
 		# thunderbird
-		tor-browser-bundle-bin
+		# tor-browser-bundle-bin
+		# spotify
+		# gimp
+		# revolt-desktop
 	];
 
 	programs.gnupg.agent = {

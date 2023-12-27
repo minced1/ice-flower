@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 {
 	environment.systemPackages = with pkgs; [
-			epson-escpr
+		epson-escpr
 	];
 
 	# Enable CUPS to print documents.
