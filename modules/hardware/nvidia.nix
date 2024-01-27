@@ -9,13 +9,13 @@
 		enable = true;
 		driSupport = true;
 		driSupport32Bit = true;
-		# extraPackages = with pkgs; [
+		extraPackages = with pkgs; [
 			#intel-media-driver # LIBVA_DRIVER_NAME=iHD
 			#vaapiIntel				 # LIBVA_DRIVER_NAME=i965 (older but works better for Firefox/Chromium)
-		# 	nvidia-vaapi-driver
+			nvidia-vaapi-driver
 		# 	vaapiVdpau
 		# 	libvdpau-va-gl
-		# ];
+		];
 	};
 
 	# Load nvidia driver for Xorg and Wayland
@@ -29,6 +29,10 @@
 			# Enable power management (do not disable this unless you have a reason to).
 			# Likely to cause problems on laptops and with screen tearing if disabled.
 			powerManagement.enable = true;
+			# Fine-grained power management. Turns off GPU when not in use.
+			# Experimental and only works on modern Nvidia GPUs (Turing or newer).
+			powerManagement.finegrained = false;
+
 
 			# Use the NVidia open source kernel module (not to be confused with the
 			# independent third-party "nouveau" open source driver).

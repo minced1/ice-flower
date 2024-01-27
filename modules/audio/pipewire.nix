@@ -15,15 +15,29 @@
 	};
 
 	environment.etc = {
-		"pipewire/pipewire.conf.d/92-low-latency.conf".text = ''
-			context.properties = {
-				default.clock.rate = 48000
-				default.clock.allowed-rates = [ 48000 96000 ]
-				default.clock.min-quantum = 32
-				default.clock.max-quantum = 8192
-				default.clock.quantum = 256
-				default.clock.quantum-limit = 8192
-			}
+"pipewire/pipewire.conf.d/92-low-latency.conf".text = ''
+	context.properties = {
+		default.clock.rate = 48000
+		default.clock.allowed-rates = [ 48000 96000 ]
+		default.clock.min-quantum = 32
+		default.clock.max-quantum = 8192
+		default.clock.quantum = 256
+		default.clock.quantum-limit = 8192
+	}
 		'';
-	};
+		"pipewire/pipewire.d/pipewire.conf".text = ''
+context.objects = [
+  {
+    factory = "adapter";
+    args = {
+      factory.name     = "support.null-audio-sink";
+      node.name        = "Microphone-Proxy";
+      node.description = "Microphone";
+      media.class      = "Audio/Source/Virtual";
+      audio.position   = "MONO";
+    };
+  }
+];
+		  '';
+		};
 }

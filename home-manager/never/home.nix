@@ -38,14 +38,14 @@
 	dconf = {
 		enable = true;
 		settings = {
-	"org/gnome/desktop/interface" = {
-		color-scheme = "prefer-dark";
-		gtk-theme = "adw-gtk3";
-		font-antialiasing = "rgba";
-	};
-			"org/gnome/desktop/peripherals/mouse" = {
-				middle-click-emulation = true;
-			};
+		"org/gnome/desktop/interface" = {
+			color-scheme = "prefer-dark";
+			gtk-theme = "adw-gtk3";
+			font-antialiasing = "rgba";
+		};
+		"org/gnome/desktop/peripherals/mouse" = {
+			middle-click-emulation = true;
+		};
 		};
 	};
 

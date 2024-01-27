@@ -5,16 +5,13 @@
 	# Enable the GNOME Desktop Environment.
 	services.xserver.displayManager.gdm.enable = true;
 	services.xserver.desktopManager.gnome.enable = true;
+	services.xserver.excludePackages = [ pkgs.xterm ];
 
 	environment.systemPackages = with pkgs; [
-		#fragments
 		gnome.gnome-software
-		openh264
-		#gnome-builder
-		#gnome.dconf-editor
-		#celeste
 
 		gnomeExtensions.rounded-window-corners
+		gnomeExtensions.pano
 	];
 
 	programs.kdeconnect = {
@@ -22,12 +19,11 @@
 		package = pkgs.gnomeExtensions.gsconnect;
 	};
 	environment.gnome.excludePackages = (with pkgs; [
-		gnome-photos
 		gnome-tour
 		gnome-connections
 	]) ++ (with pkgs.gnome; [
-		cheese
-		gnome-music
+		#gnome-music
+		epiphany
 		totem
 		simple-scan
 		baobab

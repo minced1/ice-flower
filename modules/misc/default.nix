@@ -3,7 +3,7 @@
 	imports =
 		[
 			#./python.nix
-			#./jellyfin.nix
+			./jellyfin.nix
 			./steam.nix
 			#./discord.nix
 			./texlive.nix
@@ -20,13 +20,11 @@
 		gnupg
 		# pinentry-gnome
 		curl
-		# freecad
 		firefox
-		# thunderbird
-		# tor-browser-bundle-bin
-		# spotify
-		# gimp
-		# revolt-desktop
+		meson
+		rubber
+		ninja
+		gnumake
 	];
 
 	programs.gnupg.agent = {
