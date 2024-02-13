@@ -9,9 +9,8 @@
 
 	environment.systemPackages = with pkgs; [
 		gnome.gnome-software
-
-		gnomeExtensions.rounded-window-corners
-		gnomeExtensions.pano
+		gnomeExtensions.caffeine
+		gnomeExtensions.forge
 	];
 
 	programs.kdeconnect = {

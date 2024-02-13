@@ -6,6 +6,6 @@
 		dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
 	};
 	environment.systemPackages = with pkgs; [
-	minetest
+	#minetest
 	];
 }

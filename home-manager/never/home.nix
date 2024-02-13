@@ -39,7 +39,7 @@
 		enable = true;
 		settings = {
 		"org/gnome/desktop/interface" = {
-			color-scheme = "prefer-dark";
+			color-scheme = "default";
 			gtk-theme = "adw-gtk3";
 			font-antialiasing = "rgba";
 		};
@@ -50,7 +50,7 @@
 	};
 
 	gtk = {
-		enable = true;
+		enable = false;
 		theme = {
 			name = "adw-gtk3";
 			package = pkgs.adw-gtk3;

@@ -25,6 +25,7 @@
 		rubber
 		ninja
 		gnumake
+		binutils
 	];
 
 	programs.gnupg.agent = {
