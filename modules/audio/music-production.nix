@@ -7,7 +7,7 @@
 	environment.systemPackages = with pkgs; [
 		ardour
 		lsp-plugins
-		# calf
+		calf
 		sfizz
 		drumgizmo
 		distrho
