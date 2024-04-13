@@ -33,7 +33,13 @@
 
 	# Enable nix flakes
 	nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
+	nix.optimise.automatic = true;
+	# nix.optimise.dates = [ "03:45" ]; # Optional; allows customizing optimisation schedule
+	nix.gc = {
+		automatic = true;
+		dates = "weekly";
+		options = "--delete-older-than 14d";
+	};
 
 		# use the example session manager (no others are packaged yet so this is enabled by default,
 		# no need to redefine it in your config for now)
