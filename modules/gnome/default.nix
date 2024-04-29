@@ -21,7 +21,8 @@
 		gnome-tour
 		gnome-connections
 	]) ++ (with pkgs.gnome; [
-		#gnome-music
+		geary
+		gnome-music
 		epiphany
 		totem
 		simple-scan
