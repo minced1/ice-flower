@@ -11,6 +11,9 @@
 		gnome.gnome-software
 		gnomeExtensions.caffeine
 		gnomeExtensions.forge
+		ffmpeg
+		celluloid
+		vlc
 	];
 
 	programs.kdeconnect = {
