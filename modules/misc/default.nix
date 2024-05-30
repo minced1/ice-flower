@@ -7,6 +7,7 @@
 			./steam.nix
 			#./discord.nix
 			./texlive.nix
+			./game-developement.nix
 		];
 	# Enable flatpak
 	services.flatpak.enable = true;
