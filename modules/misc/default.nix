@@ -9,8 +9,6 @@
 			./texlive.nix
 			./game-developement.nix
 		];
-	# Enable flatpak
-	services.flatpak.enable = true;
 
 	# Allow unfree packages
 	nixpkgs.config.allowUnfree = true;

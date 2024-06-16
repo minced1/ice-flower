@@ -8,6 +8,9 @@
 	services.xserver.desktopManager.gnome.enable = true;
 	services.xserver.excludePackages = [ pkgs.xterm ];
 
+	# Enable flatpak
+	services.flatpak.enable = true;
+
 	environment.systemPackages = with pkgs; [
 		gnome.gnome-software
 		gnomeExtensions.caffeine

@@ -2,14 +2,17 @@
 {
 	# Enable the X11 windowing system.
 	services.xserver.enable = true;
-	services.xserver.displayManager.defaultSession = "plasmawayland";
+	services.displayManager.defaultSession = "plasmawayland";
 	# Enable the KDE Plasma Desktop Environment.
-	services.xserver.displayManager.sddm.enable = true;
+	services.displayManager.sddm.enable = true;
 	services.xserver.desktopManager.plasma5.enable = true;
-	
+
 # 	nixpkgs.config.permittedInsecurePackages = [
 # 		"qtwebkit-5.212.0-alpha4"
 # 	];
+
+	# Enable flatpak
+	services.flatpak.enable = true;
 
 	environment.systemPackages = with pkgs; [
 		# libsForQt5.falkon
@@ -33,7 +36,7 @@
   	programs.kdeconnect = {
 		enable = true;
 	};
-	
+
 	environment.plasma5.excludePackages = with pkgs.libsForQt5; [
 		# elisa
 		# gwenview
