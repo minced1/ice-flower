@@ -17,6 +17,6 @@
 		mda_lv2
 		setbfree
 		neural-amp-modeler-lv2
-		# surge-XT
+		surge-XT
 	];
 }

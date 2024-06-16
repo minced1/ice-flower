@@ -12,22 +12,22 @@
 # 	];
 
 	environment.systemPackages = with pkgs; [
-		libsForQt5.falkon
-		libsForQt5.kate
-		libqalculate
-		kile
-		kbibtex
-		tikzit
-		keepassxc
-# 		calligra
-		translate-shell
+		# libsForQt5.falkon
+		# libsForQt5.kate
+		# libqalculate
+		# kile
+		# kbibtex
+		# tikzit
+		# keepassxc
+		# calligra
+		# translate-shell
 
-		libsForQt5.discover
- 		libsForQt5.kontact
- 		libsForQt5.kdepim-addons
- 		libsForQt5.kdepim-runtime
-# 		libsForQt5.akonadi
-# 		libsForQt5.merkuro
+		# libsForQt5.discover
+		# libsForQt5.kontact
+		# libsForQt5.kdepim-addons
+		# libsForQt5.kdepim-runtime
+		# libsForQt5.akonadi
+		# libsForQt5.merkuro
   	];
 
   	programs.kdeconnect = {

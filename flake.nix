@@ -29,6 +29,19 @@
 					musnix.nixosModules.musnix
 				];
 			};
+			specialisation = {
+				plasma.configuration = {
+					modules = [
+						(import ./kde-plasma)
+					];
+				};
+
+				gnome.configuration = {
+					modules = [
+						(import ./gnome)
+					];
+				};
+			};
 		};
 	};
 }

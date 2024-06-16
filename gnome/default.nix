@@ -1,5 +1,6 @@
 { config, lib, pkgs, ... }:
 {
+
 	# Enable the X11 windowing system.
 	services.xserver.enable = true;
 	# Enable the GNOME Desktop Environment.
@@ -20,6 +21,7 @@
 		enable = true;
 		package = pkgs.gnomeExtensions.gsconnect;
 	};
+
 	environment.gnome.excludePackages = (with pkgs; [
 		gnome-tour
 		gnome-connections

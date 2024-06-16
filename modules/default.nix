@@ -10,8 +10,6 @@
 			./hardware-configuration.nix
 			./misc
 			./audio
-			./gnome
-			#./kde-plasma
 			./hardware
 			./locale
 			./users
