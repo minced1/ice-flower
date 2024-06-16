@@ -16,8 +16,8 @@ with lib.hm.gvariant;
 
     "ca/desrt/dconf-editor" = {
       bookmarks = [ "/org/gnome/desktop/wm/" ];
-      saved-pathbar-path = "/org/gnome/desktop/interface/monospace-font-name";
-      saved-view = "/org/gnome/desktop/interface/";
+      saved-pathbar-path = "/org/gnome/desktop/interface/font-name";
+      saved-view = "/org/gnome/desktop/interface/font-name";
       show-warning = false;
       window-height = 500;
       window-is-maximized = false;
@@ -82,7 +82,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/wm/preferences" = {
-      button-layout = "icon:minimize,maximize,close";
+      button-layout = "appmenu:close";
     };
 
     "org/gnome/nautilus/preferences" = {
@@ -104,7 +104,7 @@ with lib.hm.gvariant;
     };
 
     "org/gtk/gtk4/settings/color-chooser" = {
-      selected-color = mkTuple [ true 0.2078431397676468 0.5176470875740051 0.8941176533699036 1.0 ];
+      selected-color = mkTuple [ true 0.207843 0.517647 0.894118 1.0 ];
     };
 
     "org/gtk/gtk4/settings/debug" = {

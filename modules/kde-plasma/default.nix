@@ -19,12 +19,14 @@
 			xdg-desktop-portal-gtk
 		];
 	};
+	fonts.fontDir.enable = true;
 
 	programs.dconf.enable = true;
 
 	environment.systemPackages = with pkgs; [
 		kdePackages.kate
 		keepassxc
+		cantarell-fonts
 		# libsForQt5.discover
 		# libsForQt5.kontact
 		# libsForQt5.kdepim-addons
