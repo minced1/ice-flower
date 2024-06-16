@@ -1,5 +1,9 @@
 { config, lib, pkgs, ... }:
 {
+	imports =
+		[
+			./dconf.nix
+		];
 	# Enable the X11 windowing system.
 	services.xserver.enable = true;
 	# Enable the KDE Plasma Desktop Environment.
@@ -19,7 +23,6 @@
 			xdg-desktop-portal-gtk
 		];
 	};
-	fonts.fontDir.enable = true;
 
 	programs.dconf.enable = true;
 
