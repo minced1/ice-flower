@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+	imports =
+		[
+			./dconf.nix
+		];
 	# Home Manager needs a bit of information about you and the paths it should
 	# manage.
 	home.username = "never";
@@ -35,19 +39,8 @@
 		# '')
 	];
 
-	dconf = {
-		enable = true;
-		settings = {
-		"org/gnome/desktop/interface" = {
-			color-scheme = "default";
-			gtk-theme = "adw-gtk3";
-			font-antialiasing = "rgba";
-		};
-		"org/gnome/desktop/peripherals/mouse" = {
-			middle-click-emulation = true;
-		};
-		};
-	};
+	dconf.enable = true;
+
 
 	gtk = {
 		enable = false;

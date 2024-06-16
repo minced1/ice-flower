@@ -2,10 +2,9 @@
 {
 	# Enable the X11 windowing system.
 	services.xserver.enable = true;
-	services.displayManager.defaultSession = "plasmawayland";
 	# Enable the KDE Plasma Desktop Environment.
 	services.displayManager.sddm.enable = true;
-	services.xserver.desktopManager.plasma5.enable = true;
+	services.desktopManager.plasma6.enable = true;
 
 # 	nixpkgs.config.permittedInsecurePackages = [
 # 		"qtwebkit-5.212.0-alpha4"
@@ -13,18 +12,19 @@
 
 	# Enable flatpak
 	services.flatpak.enable = true;
+	xdg.portal = {
+		enable = true;
+		extraPortals = with pkgs; [
+			# xdg-desktop-portal-kde
+			xdg-desktop-portal-gtk
+		];
+	};
+
+	programs.dconf.enable = true;
 
 	environment.systemPackages = with pkgs; [
-		# libsForQt5.falkon
-		# libsForQt5.kate
-		# libqalculate
-		# kile
-		# kbibtex
-		# tikzit
-		# keepassxc
-		# calligra
-		# translate-shell
-
+		kdePackages.kate
+		keepassxc
 		# libsForQt5.discover
 		# libsForQt5.kontact
 		# libsForQt5.kdepim-addons
@@ -37,7 +37,7 @@
 		enable = true;
 	};
 
-	environment.plasma5.excludePackages = with pkgs.libsForQt5; [
+	environment.plasma6.excludePackages = with pkgs.kdePackages; [
 		# elisa
 		# gwenview
 		# okular

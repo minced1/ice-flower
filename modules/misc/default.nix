@@ -18,7 +18,10 @@
 		git-crypt
 		gnupg
 		# pinentry-gnome
+		dconf2nix
 		curl
+		ffmpeg
+		vlc
 		firefox
 		meson
 		rubber

@@ -10,14 +10,19 @@
 
 	# Enable flatpak
 	services.flatpak.enable = true;
+	xdg.portal = {
+		enable = true;
+		extraPortals = with pkgs; [
+ 			xdg-desktop-portal-kde
+			# xdg-desktop-portal-gtk
+		];
+	};
 
 	environment.systemPackages = with pkgs; [
 		gnome.gnome-software
 		gnomeExtensions.caffeine
 		gnomeExtensions.forge
-		ffmpeg
 		celluloid
-		vlc
 	];
 
 	programs.kdeconnect = {

@@ -6,5 +6,6 @@
 		blender
 		gimp
 		inkscape
+		krita
 	];
 }
