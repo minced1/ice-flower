@@ -2,7 +2,7 @@
 {
 	imports =
 		[
-			./dconf.nix
+			#./dconf.nix
 		];
 	# Enable the X11 windowing system.
 	services.xserver.enable = true;
@@ -27,10 +27,9 @@
 	programs.dconf.enable = true;
 
 	environment.systemPackages = with pkgs; [
-		kdePackages.kate
 		keepassxc
-		cantarell-fonts
-		# libsForQt5.discover
+		kdePackages.kate
+		kdePackages.discover
 		# libsForQt5.kontact
 		# libsForQt5.kdepim-addons
 		# libsForQt5.kdepim-runtime
@@ -40,6 +39,22 @@
 
   	programs.kdeconnect = {
 		enable = true;
+	};
+
+	programs.firefox = {
+		enable = true;
+		#nativeMessagingHosts.packages = [ pkgs.kdePackages.plasma-browser-integration ];
+		preferences = {
+			"widget.use-xdg-desktop-portal.file-picker" = 1;
+		};
+	};
+
+	programs.thunderbird = {
+		enable = true;
+		#nativeMessagingHosts.packages = [ pkgs.kdePackages.plasma-browser-integration ];
+		preferences = {
+			"widget.use-xdg-desktop-portal.file-picker" = 1;
+		};
 	};
 
 	environment.plasma6.excludePackages = with pkgs.kdePackages; [

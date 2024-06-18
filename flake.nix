@@ -20,11 +20,12 @@
 				modules = [
 					(import ./modules)
 
-					#home-manager.nixosModules.home-manager {
-					#	home-manager.useGlobalPkgs = true;
-					#	home-manager.useUserPackages = true;
-					#	home-manager.users.never = import ./home-manager/never/home.nix;
-					#}
+					home-manager.nixosModules.home-manager {
+						home-manager.useGlobalPkgs = true;
+						home-manager.useUserPackages = true;
+						home-manager.backupFileExtension = "backup";
+						home-manager.users.never = import ./home-manager/never/home.nix;
+					}
 
 					musnix.nixosModules.musnix
 				];

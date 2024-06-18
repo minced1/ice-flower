@@ -36,16 +36,29 @@
 	];
 
 	dconf.enable = true;
+	dconf.settings = {
+		"org/gnome/desktop/interface" = {
+			color-scheme = "prefer-dark";
+			cursor-size = 24;
+			cursor-theme = "breeze_cursors";
+			font-antialiasing = "rgba";
+			font-name = "Cantarell";
+			gtk-theme = "Adwaita";
+			icon-theme = "Adwaita";
+			scaling-factor = 1;
+			text-scaling-factor = 1.0;
+			toolbar-style = "text";
+			toolkit-accessibility = false;
+        };
 
+		"org/gnome/desktop/peripherals/mouse" = {
+			middle-click-emulation = true;
+		};
 
-	gtk = {
-		enable = false;
-		theme = {
-			name = "adw-gtk3";
-			package = pkgs.adw-gtk3;
+		"org/gnome/desktop/wm/preferences" = {
+			button-layout = "appmenu:close";
 		};
 	};
-
 
 	# Home Manager is pretty good at managing dotfiles. The primary way to manage
 	# plain files is through 'home.file'.

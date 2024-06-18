@@ -20,14 +20,15 @@
 		# pinentry-gnome
 		dconf2nix
 		curl
-		ffmpeg
-		vlc
-		firefox
 		meson
 		rubber
 		ninja
 		gnumake
 		binutils
+
+		vlc
+		#firefox
+		#thunderbird
 	];
 
 	programs.gnupg.agent = {
