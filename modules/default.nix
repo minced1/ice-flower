@@ -46,11 +46,17 @@
 			];
 		};
 
-		gnome.configuration = {
+		pantheon.configuration = {
 			imports = [
-				./gnome
+				./pantheon
 			];
 		};
+
+# 		gnome.configuration = {
+# 			imports = [
+# 				./gnome
+# 			];
+# 		};
 	};
 		# use the example session manager (no others are packaged yet so this is enabled by default,
 		# no need to redefine it in your config for now)

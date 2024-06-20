@@ -8,7 +8,7 @@ with lib.gvariant;
     enable = true;
     profiles.user.databases = [
       {
-        #lockAll = true; # prevents overriding
+        lockAll = true; # prevents overriding
 
         "org/gnome/desktop/interface" = {
           color-scheme = "prefer-dark";
