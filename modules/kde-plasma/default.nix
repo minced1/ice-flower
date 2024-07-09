@@ -26,8 +26,12 @@
 
 	environment.systemPackages = with pkgs; [
 		keepassxc
+		libreoffice-qt6
+		kdePackages.filelight
 		kdePackages.kate
 		kdePackages.discover
+		kdePackages.dragon
+		libsForQt5.polonium
 		# libsForQt5.kontact
 		# libsForQt5.kdepim-addons
 		# libsForQt5.kdepim-runtime
@@ -49,7 +53,6 @@
 
 	programs.thunderbird = {
 		enable = true;
-		#nativeMessagingHosts.packages = [ pkgs.kdePackages.plasma-browser-integration ];
 		preferences = {
 			"widget.use-xdg-desktop-portal.file-picker" = 1;
 		};

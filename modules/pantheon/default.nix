@@ -5,6 +5,8 @@
     services.xserver.desktopManager.pantheon.enable = true;
     services.xserver.excludePackages = [ pkgs.xterm ];
 
+    # services.pantheon.apps.enable = false;
+
 	# Enable flatpak
 	services.flatpak.enable = true;
 	xdg.portal = {
@@ -12,13 +14,13 @@
 		extraPortals = with pkgs; [
 			# xdg-desktop-portal-kde
 			#xdg-desktop-portal-gtk
-		];
+		]; 
 	};
 
 	programs.dconf.enable = true;
 
 	environment.systemPackages = with pkgs; [
-
+		pantheon.epiphany
   	];
 
 

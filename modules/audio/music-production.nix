@@ -18,5 +18,7 @@
 		setbfree
 		neural-amp-modeler-lv2
 		surge-XT
+		gxplugins-lv2
+		#guitarix
 	];
 }

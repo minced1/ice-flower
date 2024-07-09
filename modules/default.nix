@@ -13,6 +13,7 @@
 			./hardware
 			./locale
 			./users
+			./kde-plasma
 		];
 
 	# Bootloader.
@@ -31,33 +32,39 @@
 
 	# Enable nix flakes
 	nix.settings.experimental-features = [ "nix-command" "flakes" ];
-	nix.optimise.automatic = true;
+
+	nix.settings.auto-optimise-store = true;
+	# nix.optimise.automatic = true;
 	# nix.optimise.dates = [ "03:45" ]; # Optional; allows customizing optimisation schedule
+
 	nix.gc = {
 		automatic = true;
 		dates = "weekly";
 		options = "--delete-older-than 14d";
 	};
 
-	specialisation = {
-		plasma.configuration = {
-			imports = [
-				./kde-plasma
-			];
-		};
-
-		pantheon.configuration = {
-			imports = [
-				./pantheon
-			];
-		};
+	environment.sessionVariables = rec {
+		MOZ_ENABLE_WAYLAND = 1;
+	};
+# 	specialisation = {
+# 		plasma.configuration = {
+# 			imports = [
+# 				./kde-plasma
+# 			];
+# 		};
+#
+# 		pantheon.configuration = {
+# 			imports = [
+# 				./pantheon
+# 			];
+# 		};
 
 # 		gnome.configuration = {
 # 			imports = [
 # 				./gnome
 # 			];
 # 		};
-	};
+# 	};
 		# use the example session manager (no others are packaged yet so this is enabled by default,
 		# no need to redefine it in your config for now)
 		#media-session.enable = true;
